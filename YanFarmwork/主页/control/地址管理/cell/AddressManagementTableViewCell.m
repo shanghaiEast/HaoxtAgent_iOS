@@ -21,4 +21,8 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)leftBtnClicked:(id)sender {
+}
+- (IBAction)rightBtnClicked:(id)sender {
+}
 @end

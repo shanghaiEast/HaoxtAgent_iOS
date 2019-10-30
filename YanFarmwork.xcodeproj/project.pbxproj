@@ -377,6 +377,14 @@
 		C7908B4A235DD2BB00964D19 /* yseRedio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7908B46235DD2B800964D19 /* yseRedio@2x.png */; };
 		C7908B4E235DDCC500964D19 /* fanhui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7908B4B235DDCC400964D19 /* fanhui@2x.png */; };
 		C7908B50235DDCC500964D19 /* fanhui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7908B4D235DDCC400964D19 /* fanhui@3x.png */; };
+		C796E1592369A43D00A2D192 /* addressChoose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1512369A43C00A2D192 /* addressChoose@3x.png */; };
+		C796E15A2369A43D00A2D192 /* addressChoose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1522369A43C00A2D192 /* addressChoose@2x.png */; };
+		C796E15B2369A43D00A2D192 /* addressUnChoose@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1532369A43C00A2D192 /* addressUnChoose@3x.png */; };
+		C796E15C2369A43D00A2D192 /* addressUnChoose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1542369A43C00A2D192 /* addressUnChoose@2x.png */; };
+		C796E15D2369A43D00A2D192 /* addressEdit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1552369A43D00A2D192 /* addressEdit@2x.png */; };
+		C796E15E2369A43D00A2D192 /* addressEdit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1562369A43D00A2D192 /* addressEdit@3x.png */; };
+		C796E15F2369A43D00A2D192 /* addAddressRight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1572369A43D00A2D192 /* addAddressRight@3x.png */; };
+		C796E1602369A43D00A2D192 /* addAddressRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C796E1582369A43D00A2D192 /* addAddressRight@2x.png */; };
 		C7A698472360526E00C8C428 /* BatchDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A698452360526E00C8C428 /* BatchDetailTableViewCell.m */; };
 		C7A698482360526E00C8C428 /* BatchDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7A698462360526E00C8C428 /* BatchDetailTableViewCell.xib */; };
 		C7A6984B236052B600C8C428 /* redDian@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A69849236052B500C8C428 /* redDian@2x.png */; };
@@ -990,6 +998,14 @@
 		C7908B46235DD2B800964D19 /* yseRedio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yseRedio@2x.png"; sourceTree = "<group>"; };
 		C7908B4B235DDCC400964D19 /* fanhui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@2x.png"; sourceTree = "<group>"; };
 		C7908B4D235DDCC400964D19 /* fanhui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui@3x.png"; sourceTree = "<group>"; };
+		C796E1512369A43C00A2D192 /* addressChoose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressChoose@3x.png"; sourceTree = "<group>"; };
+		C796E1522369A43C00A2D192 /* addressChoose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressChoose@2x.png"; sourceTree = "<group>"; };
+		C796E1532369A43C00A2D192 /* addressUnChoose@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressUnChoose@3x.png"; sourceTree = "<group>"; };
+		C796E1542369A43C00A2D192 /* addressUnChoose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressUnChoose@2x.png"; sourceTree = "<group>"; };
+		C796E1552369A43D00A2D192 /* addressEdit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressEdit@2x.png"; sourceTree = "<group>"; };
+		C796E1562369A43D00A2D192 /* addressEdit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addressEdit@3x.png"; sourceTree = "<group>"; };
+		C796E1572369A43D00A2D192 /* addAddressRight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addAddressRight@3x.png"; sourceTree = "<group>"; };
+		C796E1582369A43D00A2D192 /* addAddressRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addAddressRight@2x.png"; sourceTree = "<group>"; };
 		C7A698442360526E00C8C428 /* BatchDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatchDetailTableViewCell.h; sourceTree = "<group>"; };
 		C7A698452360526E00C8C428 /* BatchDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatchDetailTableViewCell.m; sourceTree = "<group>"; };
 		C7A698462360526E00C8C428 /* BatchDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BatchDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -2547,6 +2563,14 @@
 		C7AA4D69231CBB88002437DF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				C796E1582369A43D00A2D192 /* addAddressRight@2x.png */,
+				C796E1572369A43D00A2D192 /* addAddressRight@3x.png */,
+				C796E1522369A43C00A2D192 /* addressChoose@2x.png */,
+				C796E1512369A43C00A2D192 /* addressChoose@3x.png */,
+				C796E1552369A43D00A2D192 /* addressEdit@2x.png */,
+				C796E1562369A43D00A2D192 /* addressEdit@3x.png */,
+				C796E1542369A43C00A2D192 /* addressUnChoose@2x.png */,
+				C796E1532369A43C00A2D192 /* addressUnChoose@3x.png */,
 				C712B2FF2367096900F88DF1 /* deliveryRecordHead@3x.png */,
 				C712B3022367096A00F88DF1 /* deliveryRecordHead2x.png */,
 				C712B2FE2367096800F88DF1 /* deliveryRecordMoney@2x.png */,
@@ -2998,6 +3022,7 @@
 				C7182410236181A8000C45BF /* query直@3x.png in Resources */,
 				1340940B221E6975000B4B54 /* LaunchScreen.storyboard in Resources */,
 				D5008E1F22B0C2F1002374C5 /* MyWebViewController.xib in Resources */,
+				C796E1602369A43D00A2D192 /* addAddressRight@2x.png in Resources */,
 				C71823ED2361373B000C45BF /* FilterViewController.xib in Resources */,
 				C76B338C235F00350052A7CC /* NormalTableViewCell.xib in Resources */,
 				C7908AFE235D8E1E00964D19 /* PartnersTableViewCell.xib in Resources */,
@@ -3009,6 +3034,7 @@
 				C71BD0022362F6740012FD9A /* DeliveryQueryViewController.xib in Resources */,
 				C715464F235EDCF40045FB82 /* terminalTwo@2x.png in Resources */,
 				C71BCFD32362A5FA0012FD9A /* MachinesProcurement采购申请@3x.png in Resources */,
+				C796E15E2369A43D00A2D192 /* addressEdit@3x.png in Resources */,
 				C715462A235EA06E0045FB82 /* saleMan@3x.png in Resources */,
 				C71960CB235D641200A7B579 /* AddCreditCardViewController.xib in Resources */,
 				C76B339A235F1D7A0052A7CC /* TerminalTransferTableViewCell.xib in Resources */,
@@ -3018,6 +3044,7 @@
 				C7D976752359B7E9001ABED2 /* 终端数据汇总@3x.png in Resources */,
 				C719610C235D7BA800A7B579 /* CWResource.bundle in Resources */,
 				C712B3072367096B00F88DF1 /* deliveryRecordHead@3x.png in Resources */,
+				C796E15A2369A43D00A2D192 /* addressChoose@2x.png in Resources */,
 				C715460F235E97980045FB82 /* priceRMB@2x.png in Resources */,
 				C76B3377235EF0440052A7CC /* MachineSearchTableViewCell.xib in Resources */,
 				C7AA4D6B231CBC1E002437DF /* Images.xcassets in Resources */,
@@ -3119,10 +3146,12 @@
 				C71BD0372362FCB90012FD9A /* UserShopDetailTableViewController.xib in Resources */,
 				C71BCFEC2362DAF30012FD9A /* UploadEmptyPicCollectionViewCell.xib in Resources */,
 				C7D9764323599107001ABED2 /* MainTopView.xib in Resources */,
+				C796E15B2369A43D00A2D192 /* addressUnChoose@3x.png in Resources */,
 				C71623712360318200C5BD24 /* TerminalTransferDetailHeaderView.xib in Resources */,
 				C71545FE235E96060045FB82 /* FilterView.xib in Resources */,
 				C71BCFCE2362A5FA0012FD9A /* MachinesProcurement采购申请@2x.png in Resources */,
 				C7D976702359B302001ABED2 /* nextPage@2x.png in Resources */,
+				C796E15D2369A43D00A2D192 /* addressEdit@2x.png in Resources */,
 				1340945F221E8C4C000B4B54 /* AddButtonIcon-Active@2x.png in Resources */,
 				1340945E221E8C4C000B4B54 /* AddButtonIcon@3x.png in Resources */,
 				C7908AF7235D8C0500964D19 /* row_three@3x.png in Resources */,
@@ -3155,6 +3184,7 @@
 				C76B3368235EEF000052A7CC /* 机具解绑@2x.png in Resources */,
 				C76B33A9235F25400052A7CC /* TerminalTransferBG@2x.png in Resources */,
 				C71823F223613B89000C45BF /* FilterHeaderView.xib in Resources */,
+				C796E1592369A43D00A2D192 /* addressChoose@3x.png in Resources */,
 				C701CCE12320AD7E003F120E /* ChangePasswordViewController.xib in Resources */,
 				C71824272361A1DA000C45BF /* downArrow@3x.png in Resources */,
 				C7908AF2235D8C0500964D19 /* row_three@2x.png in Resources */,
@@ -3206,6 +3236,7 @@
 				C71BCFD42362A5FA0012FD9A /* MachinesProcurement采购申请查询@3x.png in Resources */,
 				C7D97662235999AD001ABED2 /* 终端管理@2x.png in Resources */,
 				13409446221E771B000B4B54 /* PersonCenterViewController.xib in Resources */,
+				C796E15C2369A43D00A2D192 /* addressUnChoose@2x.png in Resources */,
 				C7908B42235DD1A900964D19 /* StateView.xib in Resources */,
 				C7D9765D235999AD001ABED2 /* 合作伙伴@3x.png in Resources */,
 				C7908B26235DADE900964D19 /* searchIcon@2x.png in Resources */,
@@ -3235,6 +3266,7 @@
 				13409439221E6CA2000B4B54 /* MainViewController.xib in Resources */,
 				C7908B2C235DAFA900964D19 /* PartnerDetailViewController.xib in Resources */,
 				C71960AC235D542F00A7B579 /* 我的银行卡.png in Resources */,
+				C796E15F2369A43D00A2D192 /* addAddressRight@3x.png in Resources */,
 				C7FCCBB9231DFFCE00BCFE15 /* RegisterViewController.xib in Resources */,
 				C7D9764723599230001ABED2 /* mainBG@3x.png in Resources */,
 			);

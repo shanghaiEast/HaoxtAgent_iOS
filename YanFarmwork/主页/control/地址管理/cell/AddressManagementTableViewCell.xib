@@ -17,7 +17,85 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="114.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyX-1Z-zAT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
+                        <color key="backgroundColor" red="0.95917242765426636" green="0.95930999517440796" blue="0.95914238691329956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="748-fv-PZj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="莎莎  15618955689" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxj-Cj-EqS">
+                        <rect key="frame" x="40" y="26" width="229" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="shq-38-fUy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="textColor" red="0.20067340135574341" green="0.20070809125900269" blue="0.20066583156585693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上海市浦东新区世纪大道2000号198弄天华景 园25号楼1单元301室" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ir-MY-oFD">
+                        <rect key="frame" x="40" y="50" width="230" height="33.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="230" id="WWL-3M-6ex"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="cdG-iF-y58"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="jSA-I3-MBu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.39954099059104919" green="0.39960259199142456" blue="0.39952749013900757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wq-By-360">
+                        <rect key="frame" x="0.0" y="14" width="46" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="kcD-Ly-bYP"/>
+                            <constraint firstAttribute="width" constant="46" id="tcc-JI-Nmm"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="addressChoose.png"/>
+                        <connections>
+                            <action selector="leftBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jXr-v3-JEw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aP-ge-JYo">
+                        <rect key="frame" x="273" y="23" width="47" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="TDq-gl-sPM"/>
+                            <constraint firstAttribute="width" constant="47" id="doJ-3y-uzA"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="addressEdit.png"/>
+                        <connections>
+                            <action selector="rightBtnClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EVV-X8-8SK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wyX-1Z-zAT" secondAttribute="trailing" id="2YM-Ol-nFc"/>
+                    <constraint firstItem="4wq-By-360" firstAttribute="top" secondItem="wyX-1Z-zAT" secondAttribute="bottom" constant="4" id="AS1-Nm-PPo"/>
+                    <constraint firstItem="3aP-ge-JYo" firstAttribute="top" secondItem="wyX-1Z-zAT" secondAttribute="bottom" constant="13" id="EYc-Vx-MAh"/>
+                    <constraint firstItem="wyX-1Z-zAT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KHx-jV-2zB"/>
+                    <constraint firstItem="9Ir-MY-oFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="Or9-lc-6NN"/>
+                    <constraint firstAttribute="trailing" secondItem="9Ir-MY-oFD" secondAttribute="trailing" constant="50" id="bxE-LJ-dYB"/>
+                    <constraint firstItem="jxj-Cj-EqS" firstAttribute="top" secondItem="wyX-1Z-zAT" secondAttribute="bottom" constant="16" id="kJp-3G-6ps"/>
+                    <constraint firstAttribute="trailing" secondItem="3aP-ge-JYo" secondAttribute="trailing" id="qZJ-YS-rV5"/>
+                    <constraint firstItem="jxj-Cj-EqS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="s0H-Bv-Jng"/>
+                    <constraint firstItem="9Ir-MY-oFD" firstAttribute="top" secondItem="jxj-Cj-EqS" secondAttribute="bottom" constant="3" id="sfr-CN-FyD"/>
+                    <constraint firstItem="3aP-ge-JYo" firstAttribute="leading" secondItem="jxj-Cj-EqS" secondAttribute="trailing" constant="4" id="t0U-qw-UmF"/>
+                    <constraint firstItem="4wq-By-360" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="u46-Fg-7mQ"/>
+                    <constraint firstItem="wyX-1Z-zAT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uwq-0g-6tg"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="leftBtn" destination="4wq-By-360" id="sut-i5-TLv"/>
+                <outlet property="rightBtn" destination="3aP-ge-JYo" id="55b-FA-NtW"/>
+            </connections>
+            <point key="canvasLocation" x="82.608695652173921" y="37.165178571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="addressChoose.png" width="21" height="21"/>
+        <image name="addressEdit.png" width="18.5" height="15.5"/>
+    </resources>
 </document>

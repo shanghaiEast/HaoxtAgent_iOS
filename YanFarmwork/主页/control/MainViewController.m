@@ -67,10 +67,10 @@ static float mainOtherViewHeight = 589;
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
 ////test
-//    AddressManagementViewController *VC = [[AddressManagementViewController alloc] initWithNibName:@"AddressManagementViewController" bundle:nil];
-//    VC.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:VC animated:YES];
-//    
+    AddressManagementViewController *VC = [[AddressManagementViewController alloc] initWithNibName:@"AddressManagementViewController" bundle:nil];
+    VC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:VC animated:YES];
+ 
     
 }
 

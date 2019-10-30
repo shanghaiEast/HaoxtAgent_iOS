@@ -18,6 +18,8 @@
 
 @property (retain, nonatomic) UIButton *rightBtn;
 
+@property (nonatomic) int leftBtnIndex;
+
 @end
 
 @implementation AddressManagementViewController
@@ -72,6 +74,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
+    
+    _leftBtnIndex = 0;
+    
     [self createTableView];
 }
 
@@ -167,6 +172,18 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     
+    if (indexPath.row == _leftBtnIndex) {
+        [cell.leftBtn setImage:[UIImage imageNamed:@"addressChoose.png"] forState:UIControlStateNormal];
+    }else{
+        [cell.leftBtn setImage:[UIImage imageNamed:@"addressUnChoose.png"] forState:UIControlStateNormal];
+    }
+    cell.leftBtn.tag = indexPath.row;
+    [cell.leftBtn addTarget:self action:@selector(leftBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    cell.rightBtn.tag = indexPath.row;
+    [cell.rightBtn addTarget:self action:@selector(rightBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     return cell;
 }
 
@@ -174,6 +191,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
    
+}
+
+- (void)leftBtnClicked:(UIButton *)button {
+    if (_leftBtnIndex == button.tag) {
+        return;
+    }
+    
+    _leftBtnIndex = button.tag;
+    [_myTableView reloadData];
+}
+
+- (void)rightBtnClicked:(UIButton *)button {
+    
 }
 
 @end
