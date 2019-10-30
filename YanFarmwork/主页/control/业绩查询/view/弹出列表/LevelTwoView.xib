@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LevelTwoView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-iB-klk">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-SI-6Of">
+                    <rect key="frame" x="0.0" y="286" width="320" height="282"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAM-W0-Amg">
+                            <rect key="frame" x="-3" y="0.0" width="73" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="73" id="efR-Ia-LSh"/>
+                                <constraint firstAttribute="height" constant="40" id="udE-5p-XjK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.89736628529999996" green="0.34575632210000001" blue="0.3136770129" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnOrConfireBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="bKi-VD-y1g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfb-T4-tAV">
+                            <rect key="frame" x="247" y="0.0" width="73" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="49M-oz-2Hg"/>
+                                <constraint firstAttribute="width" constant="73" id="cl1-Sy-3nn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.89736628529999996" green="0.34575632210000001" blue="0.3136770129" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelBtnOrConfireBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="TwN-QN-hvL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="bfb-T4-tAV" firstAttribute="top" secondItem="hIx-SI-6Of" secondAttribute="top" id="AKV-DJ-ZJF"/>
+                        <constraint firstItem="nAM-W0-Amg" firstAttribute="top" secondItem="hIx-SI-6Of" secondAttribute="top" id="Nfq-3v-EDj"/>
+                        <constraint firstItem="nAM-W0-Amg" firstAttribute="leading" secondItem="hIx-SI-6Of" secondAttribute="leading" constant="-3" id="s9b-j7-zP6"/>
+                        <constraint firstAttribute="trailing" secondItem="bfb-T4-tAV" secondAttribute="trailing" id="y3T-z0-6jF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fdb-iB-klk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TIr-kC-Ret"/>
+                <constraint firstAttribute="trailing" secondItem="fdb-iB-klk" secondAttribute="trailing" id="YRO-RI-ANW"/>
+                <constraint firstItem="fdb-iB-klk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="aiU-9q-Udz"/>
+                <constraint firstItem="hIx-SI-6Of" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fID-Ab-oxJ"/>
+                <constraint firstItem="hIx-SI-6Of" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="143" id="m97-Uq-Vj9"/>
+                <constraint firstAttribute="bottom" secondItem="hIx-SI-6Of" secondAttribute="bottom" id="o1Z-La-J8l"/>
+                <constraint firstAttribute="bottom" secondItem="fdb-iB-klk" secondAttribute="bottom" id="qYg-V0-3P0"/>
+                <constraint firstAttribute="trailing" secondItem="hIx-SI-6Of" secondAttribute="trailing" id="xuw-Nn-JC1"/>
+            </constraints>
+            <connections>
+                <outlet property="listView" destination="hIx-SI-6Of" id="iaf-sy-OKd"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="62.323943661971832"/>
+        </view>
+    </objects>
+</document>

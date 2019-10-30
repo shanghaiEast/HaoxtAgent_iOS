@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StateView">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="49"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0V-wa-Mnz">
+                    <rect key="frame" x="48" y="1" width="59" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="3Zt-An-WR1"/>
+                        <constraint firstAttribute="height" constant="45" id="N0I-0z-1qN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="  是" image="noRedio.png">
+                        <color key="titleColor" red="0.2000022233" green="0.19999706749999999" blue="0.1999980509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <state key="selected" title="  是" image="yseRedio.png"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="yesOrNoBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="qfe-7O-JY7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8a-RH-Cpn">
+                    <rect key="frame" x="109" y="1" width="59" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="dEs-hg-jDP"/>
+                        <constraint firstAttribute="width" constant="59" id="eTn-zs-Cro"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="  否" image="noRedio.png">
+                        <color key="titleColor" red="0.2000022233" green="0.19999706749999999" blue="0.1999980509" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <state key="selected" title="  否" image="yseRedio.png"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="yesOrNoBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="s5h-E3-V0t"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="e8a-RH-Cpn" firstAttribute="leading" secondItem="J0V-wa-Mnz" secondAttribute="trailing" constant="2" id="Lsd-rT-T9M"/>
+                <constraint firstItem="J0V-wa-Mnz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="dWb-79-qmz"/>
+                <constraint firstAttribute="trailing" secondItem="e8a-RH-Cpn" secondAttribute="trailing" constant="12" id="hKq-sA-jUZ"/>
+                <constraint firstItem="e8a-RH-Cpn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="nMa-gj-bml"/>
+                <constraint firstAttribute="bottom" secondItem="e8a-RH-Cpn" secondAttribute="bottom" constant="3" id="oYw-GO-4eq"/>
+                <constraint firstAttribute="bottom" secondItem="J0V-wa-Mnz" secondAttribute="bottom" constant="3" id="p5C-ad-wiP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="noBtn" destination="e8a-RH-Cpn" id="nxV-0x-aYA"/>
+                <outlet property="yesBtn" destination="J0V-wa-Mnz" id="cvd-Wc-PyX"/>
+            </connections>
+            <point key="canvasLocation" x="-16.875" y="125.17605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noRedio.png" width="13" height="13"/>
+        <image name="yseRedio.png" width="13" height="13"/>
+    </resources>
+</document>
