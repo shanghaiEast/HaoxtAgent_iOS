@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommonProblemsViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjz-d5-ckV">
+                    <rect key="frame" x="0.0" y="513" width="320" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="ciI-dB-1sc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="客服电话:400-1234-5678">
+                        <color key="titleColor" red="0.96148926020000003" green="0.31537246699999999" blue="0.042994715269999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="callUsClicked:" destination="-1" eventType="touchUpInside" id="xJo-8A-Fkh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Xjz-d5-ckV" secondAttribute="bottom" id="0mw-Vo-afW"/>
+                <constraint firstAttribute="trailing" secondItem="Xjz-d5-ckV" secondAttribute="trailing" id="Kcx-KZ-SVe"/>
+                <constraint firstItem="Xjz-d5-ckV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iIa-WY-lzW"/>
+            </constraints>
+            <point key="canvasLocation" x="121.875" y="62.323943661971832"/>
+        </view>
+    </objects>
+</document>

@@ -187,4 +187,10 @@
 #pragma mark 图片压缩到指定大小
 + (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize withImage:(UIImage *)image;
 
+#pragma mark 区域边框阴影
++ (void)showShadow:(UIView *)showView;
+
+
+
+
 @end

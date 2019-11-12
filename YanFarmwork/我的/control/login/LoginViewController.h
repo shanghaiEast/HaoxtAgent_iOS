@@ -27,6 +27,13 @@ typedef void(^LoginSuccessBlock)(BOOL success);
 
 
 
+@property (weak, nonatomic) IBOutlet UIButton *agreementBtn;
+- (IBAction)agreementBtnClick:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *loginAgreedBtn;
+- (IBAction)loginAgreedBtnClick:(id)sender;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *mindPassword;
 - (IBAction)mindPasswordClick:(id)sender;
 

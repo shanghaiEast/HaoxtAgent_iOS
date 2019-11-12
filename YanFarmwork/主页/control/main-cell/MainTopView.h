@@ -13,7 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MainTopView : UIView
 
 
+@property (weak, nonatomic) IBOutlet UILabel *allMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leftMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rightMoneyLabel;
+
 @property (weak, nonatomic) IBOutlet UIView *centerView;
+
+
+
+- (IBAction)tiXianBtnClicked:(id)sender;
 
 
 

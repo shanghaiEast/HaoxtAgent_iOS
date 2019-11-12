@@ -63,6 +63,7 @@
     _myTableView.sectionFooterHeight = CGFLOAT_MIN;
     _myTableView.tableFooterView = [UIView new];
     [self.view addSubview:_myTableView];
+
     
     if (@available(iOS 11.0, *)) {
         _myTableView.estimatedRowHeight = 0;

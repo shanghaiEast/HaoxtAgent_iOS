@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPolicyViewController">
+            <connections>
+                <outlet property="HListView" destination="DCM-9P-Gjw" id="WVP-tk-90q"/>
+                <outlet property="myTableView" destination="3fc-j8-cmg" id="kzt-jG-7fr"/>
+                <outlet property="selectView" destination="vyN-fd-qKw" id="Kcc-DC-9Q0"/>
+                <outlet property="titleNameLabel" destination="QFS-pV-C4E" id="WAQ-EK-agM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kiv-op-Ubb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myPolicyBG.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aol-HM-KhE">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97947245839999997" green="0.76420074699999996" blue="0.53419953580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Aol-HM-KhE" secondAttribute="trailing" id="Ibd-c6-itd"/>
+                        <constraint firstItem="Aol-HM-KhE" firstAttribute="top" secondItem="Kiv-op-Ubb" secondAttribute="top" id="IlQ-Yz-QmI"/>
+                        <constraint firstItem="Aol-HM-KhE" firstAttribute="leading" secondItem="Kiv-op-Ubb" secondAttribute="leading" id="Vs6-W5-tjY"/>
+                        <constraint firstAttribute="bottom" secondItem="Aol-HM-KhE" secondAttribute="bottom" id="i55-yJ-RWy"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前等级 V1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFS-pV-C4E">
+                    <rect key="frame" x="15" y="39" width="290" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="G0f-Bu-7IF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCM-9P-Gjw">
+                    <rect key="frame" x="0.0" y="74" width="320" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="ufj-fB-Hkb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyN-fd-qKw">
+                    <rect key="frame" x="0.0" y="173" width="320" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FxW-RQ-y5B"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3D-p6-xiv">
+                    <rect key="frame" x="15" y="251" width="289" height="297"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3fc-j8-cmg">
+                            <rect key="frame" x="0.0" y="0.0" width="289" height="289"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="3fc-j8-cmg" firstAttribute="top" secondItem="r3D-p6-xiv" secondAttribute="top" id="Axx-2r-Oxj"/>
+                        <constraint firstAttribute="bottom" secondItem="3fc-j8-cmg" secondAttribute="bottom" constant="8" id="IIO-5M-oF3"/>
+                        <constraint firstItem="3fc-j8-cmg" firstAttribute="leading" secondItem="r3D-p6-xiv" secondAttribute="leading" id="htK-OJ-If2"/>
+                        <constraint firstAttribute="trailing" secondItem="3fc-j8-cmg" secondAttribute="trailing" id="qZj-7L-V9w"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="r3D-p6-xiv" firstAttribute="top" secondItem="vyN-fd-qKw" secondAttribute="bottom" constant="28" id="4rw-FP-GO5"/>
+                <constraint firstAttribute="bottom" secondItem="r3D-p6-xiv" secondAttribute="bottom" constant="20" id="587-dg-0Mh"/>
+                <constraint firstAttribute="bottom" secondItem="Kiv-op-Ubb" secondAttribute="bottom" id="5zK-dL-jWc"/>
+                <constraint firstAttribute="trailing" secondItem="r3D-p6-xiv" secondAttribute="trailing" constant="16" id="79s-mq-jjl"/>
+                <constraint firstItem="QFS-pV-C4E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="39" id="8Wf-VV-OoC"/>
+                <constraint firstItem="r3D-p6-xiv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="9gS-xS-Bj0"/>
+                <constraint firstItem="Kiv-op-Ubb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9jA-gh-Nf4"/>
+                <constraint firstAttribute="trailing" secondItem="DCM-9P-Gjw" secondAttribute="trailing" id="Fat-jB-XSR"/>
+                <constraint firstItem="vyN-fd-qKw" firstAttribute="top" secondItem="DCM-9P-Gjw" secondAttribute="bottom" constant="39" id="IxN-ha-yVR"/>
+                <constraint firstAttribute="trailing" secondItem="Kiv-op-Ubb" secondAttribute="trailing" id="QSQ-EN-2gc"/>
+                <constraint firstItem="Kiv-op-Ubb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="S3b-vz-6TC"/>
+                <constraint firstAttribute="trailing" secondItem="vyN-fd-qKw" secondAttribute="trailing" id="S9y-41-LXt"/>
+                <constraint firstItem="DCM-9P-Gjw" firstAttribute="top" secondItem="QFS-pV-C4E" secondAttribute="bottom" constant="14" id="XkL-w1-U6J"/>
+                <constraint firstItem="QFS-pV-C4E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="iCk-n6-oUv"/>
+                <constraint firstAttribute="trailing" secondItem="QFS-pV-C4E" secondAttribute="trailing" constant="15" id="mmk-kF-LvL"/>
+                <constraint firstItem="DCM-9P-Gjw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qHg-H7-rgx"/>
+                <constraint firstItem="vyN-fd-qKw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tvm-ZZ-XEu"/>
+            </constraints>
+            <point key="canvasLocation" x="121.875" y="62.323943661971832"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="myPolicyBG.png" width="1128" height="2558"/>
+    </resources>
+</document>

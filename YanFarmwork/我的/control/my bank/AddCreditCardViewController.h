@@ -28,6 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *commitBtn;
 - (IBAction)commitBtnClick:(id)sender;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+
+
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

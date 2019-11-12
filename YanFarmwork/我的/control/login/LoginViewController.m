@@ -45,7 +45,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [self.view.superview setFrame:CGRectMake(0, 0, ScreenWidth, 700)];
+        [self.view.superview setFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     });
     
     
@@ -57,6 +57,8 @@
     _lookPasswordBool = NO;
     
    
+    [_mindPassword setImage:[UIImage imageNamed:@"loginUnAgreed.png"] forState:UIControlStateNormal];
+    
     [_phoneNumber setValue:WEAKER_TEXT_LEVEL_1 forKeyPath:@"_placeholderLabel.textColor"];
     
     [_passwordNumber setValue:WEAKER_TEXT_LEVEL_1 forKeyPath:@"_placeholderLabel.textColor"];
@@ -130,6 +132,17 @@
     };
     
 }
+
+
+- (IBAction)agreementBtnClick:(id)sender {
+    NSLog(@"用户协议");
+}
+
+- (IBAction)loginAgreedBtnClick:(id)sender {
+     NSLog(@"我已阅读并同意");
+    _loginAgreedBtn.selected = !_loginAgreedBtn.selected;
+}
+
 - (IBAction)loginBtnClick:(id)sender {
     //登录
     if (_phoneNumber.text.length == 0) {

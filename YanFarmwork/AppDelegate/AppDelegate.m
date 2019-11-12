@@ -11,9 +11,6 @@
 #import <mach/mach.h>
 
 
-
-
-
 @interface AppDelegate ()
 
 
@@ -90,18 +87,18 @@
 
 - (void)initView{
     _mainVC = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
-    _mainVC.title = @"好享推";
+    _mainVC.title = @"首页";
     UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:_mainVC];
     
-//    _tradinVC = [[TradingViewController alloc]initWithNibName:@"TradingViewController" bundle:nil];
-//    _tradinVC.title = @"交易查询";
-//    UINavigationController *optionalNav = [[UINavigationController alloc]initWithRootViewController:_tradinVC];
+    _collegeVC = [[CollegeViewController alloc]initWithNibName:@"CollegeViewController" bundle:nil];
+    _collegeVC.title = @"商学院";
+    UINavigationController *optionalNav = [[UINavigationController alloc]initWithRootViewController:_collegeVC];
     
     _personCenterVC = [[PersonCenterViewController alloc]initWithNibName:@"PersonCenterViewController" bundle:nil];
     _personCenterVC.title = @"我的";
     UINavigationController *personCenterNav = [[UINavigationController alloc]initWithRootViewController:_personCenterVC];
     
-    NSArray *bars = [[NSArray alloc]initWithObjects:mainNav,personCenterNav, nil];
+    NSArray *bars = [[NSArray alloc]initWithObjects:mainNav,optionalNav,personCenterNav, nil];
     
     
     
@@ -113,19 +110,22 @@
     
     UITabBar *tabBar = _tabBarC.tabBar;
     tabBar.backgroundColor = [UIColor colorWithHexString:@"#F7F7F7"];
-    NSArray *barName = [[NSArray alloc]initWithObjects:@"首页",@"我的", nil];
+    NSArray *barName = [[NSArray alloc]initWithObjects:@"首页",@"商学院",@"我的", nil];
     
     NSArray *barColor = [[NSArray alloc]initWithObjects:
                          MAINCOLOR,
                          MAINCOLOR,
+                          MAINCOLOR,
                          nil];
     
     NSArray *barPic = [[NSArray alloc]initWithObjects:
                        @"tab_one_unSelect",
+                       @"tab_two_unSelect",
                        @"tab_three_unSelect",
                        nil];
     NSArray *barSelectPic = [[NSArray alloc]initWithObjects:
                              @"tab_one_Select",
+                             @"tab_two_Select",
                              @"tab_three_Select",
                              nil];
     
@@ -139,10 +139,13 @@
         tabBarItem.selectedImage = [[UIImage imageNamed:[barSelectPic objectAtIndex:a]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     
+    _tabBarC.selectedIndex = 0;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = _tabBarC;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
 }
 
 

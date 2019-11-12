@@ -34,15 +34,15 @@
     [MyTools setViewController:self withNavigationBarColor:WHITECOLOR andItem:@"我的银行卡" itemColor:BLACKCOLOR haveBackBtn:YES withBackImage:defaultBarBackImage_black withBackClickTarget:self BackClickAction:@selector(popViewClick)];
     
     
-//    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [rightButton setFrame:CGRectMake(0, 0, 80, 38)];
-//    [rightButton.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
-//    [rightButton setTitleColor:[UIColor colorWithHexString:@"#666666"] forState:UIControlStateNormal];
-//    [rightButton setTitle:@"额度说明" forState:UIControlStateNormal];
-//    [rightButton addTarget:self action:@selector(addCreditCard) forControlEvents:UIControlEventTouchUpInside];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightButton setFrame:CGRectMake(0, 0, 80, 38)];
+    [rightButton.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
+    [rightButton setTitleColor:[UIColor colorWithHexString:@"#666666"] forState:UIControlStateNormal];
+    [rightButton setTitle:@"添加银行卡" forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(addCreditCard) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     
-//    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 }
 
 - (void)popViewClick{
@@ -52,7 +52,9 @@
 
 - (void)addCreditCard {
     
-
+    AddCreditCardViewController *addCardVC = [[AddCreditCardViewController alloc] initWithNibName:@"AddCreditCardViewController" bundle:nil];
+    addCardVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:addCardVC animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -122,7 +124,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return 50;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -136,29 +138,34 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    view.backgroundColor = LINECOLOR;
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
-    lineView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
-    [view addSubview:lineView];
-    
-    UIImageView *myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, (view.frame.size.height-10-16)/2+10, 16, 16)];
-    myImageView.image = [UIImage imageNamed:@"更改.png"];
-    [view addSubview:myImageView];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, (view.frame.size.height-10-16)/2+10, 100, 16)];
-    titleLabel.font = [UIFont systemFontOfSize:14];
-    titleLabel.textColor = IMPORTANT_TEXT;
-    titleLabel.text = @"更改银行卡";
-    [view addSubview:titleLabel];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:view.bounds];
-    [button addTarget:self action:@selector(pushToBankCade) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:button];
     
     return view;
+
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
+//
+//    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+//    lineView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+//    [view addSubview:lineView];
+//
+//    UIImageView *myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, (view.frame.size.height-10-16)/2+10, 16, 16)];
+//    myImageView.image = [UIImage imageNamed:@"更改.png"];
+//    [view addSubview:myImageView];
+//
+//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, (view.frame.size.height-10-16)/2+10, 100, 16)];
+//    titleLabel.font = [UIFont systemFontOfSize:14];
+//    titleLabel.textColor = IMPORTANT_TEXT;
+//    titleLabel.text = @"更改银行卡";
+//    [view addSubview:titleLabel];
+//
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [button setFrame:view.bounds];
+//    [button addTarget:self action:@selector(pushToBankCade) forControlEvents:UIControlEventTouchUpInside];
+//    [view addSubview:button];
+//
+//    return view;
     
 }
 
@@ -210,11 +217,11 @@
     
 }
 
-- (void)pushToBankCade{
-    AddCreditCardViewController *addCardVC = [[AddCreditCardViewController alloc] initWithNibName:@"AddCreditCardViewController" bundle:nil];
-    addCardVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:addCardVC animated:YES];
-}
+//- (void)pushToBankCade{
+//    AddCreditCardViewController *addCardVC = [[AddCreditCardViewController alloc] initWithNibName:@"AddCreditCardViewController" bundle:nil];
+//    addCardVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:addCardVC animated:YES];
+//}
 
 - (void)requestList{
 

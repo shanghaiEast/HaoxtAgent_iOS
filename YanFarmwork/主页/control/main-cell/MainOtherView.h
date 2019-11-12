@@ -13,22 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MainOtherView : UIView
 
 
-//我的收益
-@property (weak, nonatomic) IBOutlet UILabel *topLeftLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rightLeftLabel;
+@property (weak, nonatomic) IBOutlet UIView *collectionView;
 
-//交易数据汇总
-@property (weak, nonatomic) IBOutlet UILabel *middleAllLabel;
-@property (weak, nonatomic) IBOutlet UILabel *middleMonthLabel;
-@property (weak, nonatomic) IBOutlet UILabel *middleDayLabel;
-
-//终端数据汇总
-@property (weak, nonatomic) IBOutlet UILabel *bottomAllLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bottomMonthLabel;
-@property (weak, nonatomic) IBOutlet UILabel *bottomDayLabel;
-
-
-- (IBAction)detailClicked:(id)sender;
 
 
 

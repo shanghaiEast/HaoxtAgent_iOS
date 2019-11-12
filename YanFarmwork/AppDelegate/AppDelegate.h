@@ -17,8 +17,8 @@
 #import "MyTabBarController.h"
 
 #import "MainViewController.h"
-#import "TradingViewController.h"
 #import "PersonCenterViewController.h"
+#import "CollegeViewController.h"
 
 
 
@@ -34,7 +34,7 @@
 @property (retain, nonatomic) UITabBarController *tabBarC;
 
 @property (retain, nonatomic) MainViewController *mainVC;
-@property (retain, nonatomic) TradingViewController *tradinVC;
+@property (retain, nonatomic) CollegeViewController *collegeVC;
 @property (retain, nonatomic) PersonCenterViewController *personCenterVC;
 
 @property (copy, nonatomic) IQKeyboardManager *keyboardManager;

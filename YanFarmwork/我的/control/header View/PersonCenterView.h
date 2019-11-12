@@ -13,23 +13,18 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PersonCenterView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *bgView;
+@property (weak, nonatomic) IBOutlet UIView *renZhenView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 
-@property (weak, nonatomic) IBOutlet UILabel *nameAndPhoneLabel;
-
-@property (weak, nonatomic) IBOutlet UIButton *toListBtn;
-- (IBAction)setBtnClick:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UILabel *fenRunLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *jiHuoLabel;
-
-@property (weak, nonatomic) IBOutlet UILabel *mentionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 
 
+- (IBAction)personDetailBtnClicked:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIImageView *bottonImageView;
+- (IBAction)listBtnClicked:(id)sender;
+
 
 
 

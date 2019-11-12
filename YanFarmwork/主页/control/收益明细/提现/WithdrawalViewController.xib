@@ -62,14 +62,24 @@
                                 <constraint firstAttribute="width" constant="13" id="sG6-X5-awu"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TB-2G-8gD">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                            <connections>
+                                <action selector="chooseSelected:" destination="-1" eventType="touchUpInside" id="j7h-Ea-WRt"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9TB-2G-8gD" secondAttribute="trailing" id="BWj-h2-ADh"/>
+                        <constraint firstItem="9TB-2G-8gD" firstAttribute="leading" secondItem="kY3-kw-3h8" secondAttribute="leading" id="Bs7-0X-T6f"/>
                         <constraint firstItem="868-Nw-lyp" firstAttribute="centerY" secondItem="kY3-kw-3h8" secondAttribute="centerY" id="FVR-tz-Cpg"/>
                         <constraint firstItem="A6T-MQ-7Vr" firstAttribute="centerY" secondItem="kY3-kw-3h8" secondAttribute="centerY" id="G1B-Q2-eMU"/>
                         <constraint firstAttribute="trailing" secondItem="868-Nw-lyp" secondAttribute="trailing" constant="13" id="KJb-wS-NrJ"/>
                         <constraint firstItem="9Ye-bZ-Q0b" firstAttribute="centerY" secondItem="kY3-kw-3h8" secondAttribute="centerY" id="Lqk-L1-98l"/>
+                        <constraint firstAttribute="bottom" secondItem="9TB-2G-8gD" secondAttribute="bottom" id="MNd-Ej-In8"/>
                         <constraint firstAttribute="height" constant="90" id="N9g-Jj-TgY"/>
+                        <constraint firstItem="9TB-2G-8gD" firstAttribute="top" secondItem="kY3-kw-3h8" secondAttribute="top" id="WO1-er-PbI"/>
                         <constraint firstItem="9Ye-bZ-Q0b" firstAttribute="leading" secondItem="A6T-MQ-7Vr" secondAttribute="trailing" constant="8" id="hIZ-yH-EyF"/>
                         <constraint firstItem="868-Nw-lyp" firstAttribute="leading" secondItem="9Ye-bZ-Q0b" secondAttribute="trailing" constant="8" id="lbu-hE-yq6"/>
                         <constraint firstItem="A6T-MQ-7Vr" firstAttribute="leading" secondItem="kY3-kw-3h8" secondAttribute="leading" constant="18" id="s5Z-ME-rY9"/>

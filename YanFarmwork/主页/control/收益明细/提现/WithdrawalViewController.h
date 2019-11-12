@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *allMonetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *otherMoneyLabel;
 
+
+- (IBAction)chooseSelected:(id)sender;
 - (IBAction)getAllMoneyBtnClick:(id)sender;
 - (IBAction)confirmBtnClicked:(id)sender;
 

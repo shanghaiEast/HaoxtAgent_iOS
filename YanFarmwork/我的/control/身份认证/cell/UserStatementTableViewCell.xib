@@ -249,12 +249,12 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tn0-f9-iRO">
                         <rect key="frame" x="17" y="542" width="292" height="56"/>
-                        <color key="backgroundColor" red="0.89736628529999996" green="0.34575632210000001" blue="0.3136770129" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.96148926019668579" green="0.31537246704101562" blue="0.04299471527338028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="56" id="w2l-zd-mqk"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                        <state key="normal" title="下一步">
+                        <state key="normal" title="确 定">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <userDefinedRuntimeAttributes>

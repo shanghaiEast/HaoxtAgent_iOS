@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LineView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C1X-Z5-wvz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="C1X-Z5-wvz" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="4o9-IK-xbC"/>
+                <constraint firstItem="C1X-Z5-wvz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ezd-QP-snn"/>
+                <constraint firstItem="C1X-Z5-wvz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UNF-Rq-G9t"/>
+                <constraint firstItem="C1X-Z5-wvz" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="m0e-Ub-IDl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="chartsView" destination="C1X-Z5-wvz" id="AuF-QV-TVj"/>
+            </connections>
+            <point key="canvasLocation" x="127.5" y="-26.408450704225352"/>
+        </view>
+    </objects>
+</document>

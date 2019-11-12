@@ -15,6 +15,7 @@
 #import "SettlementManagerViewController.h"
 #import "CheckRealNameTableViewController.h"
 #import "UserCertificationViewController.h"
+#import "CommonProblemsViewController.h"
 
 
 @interface PersonCenterViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -55,7 +56,12 @@
 - (void)createTableView {
     //table view
     
-    _titleArrar = @[@"实名认证", @"我的银行卡", @"秒结详情", @"设置"];
+    _titleArrar = @[@"实名认证", @"商户APP下载", @"帮助中心", @"设置"];
+    _picturArray = @[
+                     [UIImage imageNamed:@"实名认证.png"],
+                     [UIImage imageNamed:@"xiazai (2).png"],
+                     [UIImage imageNamed:@"help.png"],
+                     [UIImage imageNamed:@"组 10.png"]];
     
     _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-kTabBarHeight) style:UITableViewStylePlain];
     _myTableView.backgroundColor = [UIColor whiteColor];
@@ -115,7 +121,7 @@
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.leftImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",[_titleArrar objectAtIndex:indexPath.row]]];
+    cell.leftImageView.image = [_picturArray objectAtIndex:indexPath.row];
     
     cell.titleLabel.text = [NSString stringWithFormat:@"%@",[_titleArrar objectAtIndex:indexPath.row]];
     
@@ -149,24 +155,24 @@
         [self.navigationController pushViewController:VC animated:YES];
     }
     if (indexPath.row == 1) {
-        //银行卡
-        TCreditCardCerTableViewController *cardVC = [[TCreditCardCerTableViewController alloc] initWithNibName:@"TCreditCardCerTableViewController" bundle:nil];
-        cardVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:cardVC animated:YES];
+        //商户APP下载
+//        TCreditCardCerTableViewController *cardVC = [[TCreditCardCerTableViewController alloc] initWithNibName:@"TCreditCardCerTableViewController" bundle:nil];
+//        cardVC.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:cardVC animated:YES];
     }
     if (indexPath.row == 2) {
-        //
-        SettlementManagerViewController *partnersVC = [[SettlementManagerViewController alloc] initWithNibName:@"SettlementManagerViewController" bundle:nil];
-        partnersVC.jumpType = AGENT;
-        partnersVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:partnersVC animated:YES];
+        //帮助中心
+        CommonProblemsViewController *VC = [[CommonProblemsViewController alloc] initWithNibName:@"CommonProblemsViewController" bundle:nil];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
+        
     }
-    if (indexPath.row == 3) {
-        //
-        CheckRealNameTableViewController *partnersVC = [[CheckRealNameTableViewController alloc] initWithNibName:@"CheckRealNameTableViewController" bundle:nil];
-        partnersVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:partnersVC animated:YES];
-    }
+//    if (indexPath.row == 3) {
+//        //
+////        CheckRealNameTableViewController *partnersVC = [[CheckRealNameTableViewController alloc] initWithNibName:@"CheckRealNameTableViewController" bundle:nil];
+////        partnersVC.hidesBottomBarWhenPushed = YES;
+////        [self.navigationController pushViewController:partnersVC animated:YES];
+//    }
     
     
 }

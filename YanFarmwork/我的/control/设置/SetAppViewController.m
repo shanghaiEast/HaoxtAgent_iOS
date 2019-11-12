@@ -13,6 +13,7 @@
 #import "SetAppTableViewCell.h"
 #import "ChangePasswordViewController.h"
 #import "ChangePhoneStepOne.h"
+#import "AboutUsViewController.h"
 
 
 
@@ -45,7 +46,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _titleArrar = @[@"修改密码", @"修改手机号", @"版本号"];
+    _titleArrar = @[@"修改密码", @"关于我们",@"联系客服", @"版本号"];
     
     [self createTableView];
 }
@@ -78,7 +79,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     
-    return CGFLOAT_MIN;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -88,7 +89,11 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    return [UIView new];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    view.backgroundColor = LINECOLOR;
+    
+    
+    return view;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,9 +125,17 @@
         [self.navigationController pushViewController:changePasswordVC animated:YES];
     }
     if (indexPath.row == 1) {
-        ChangePhoneStepOne *changePhoneStepOneVC = [[ChangePhoneStepOne alloc] initWithNibName:@"ChangePhoneStepOne" bundle:nil];
-        changePhoneStepOneVC.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:changePhoneStepOneVC animated:YES];
+//        ChangePhoneStepOne *changePhoneStepOneVC = [[ChangePhoneStepOne alloc] initWithNibName:@"ChangePhoneStepOne" bundle:nil];
+//        changePhoneStepOneVC.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:changePhoneStepOneVC animated:YES];
+        
+        AboutUsViewController *VC = [[AboutUsViewController alloc] initWithNibName:@"AboutUsViewController" bundle:nil];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
+ 
+    }
+    if (indexPath.row == 2) {
+       
         
     }
 }

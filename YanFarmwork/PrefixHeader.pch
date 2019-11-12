@@ -33,6 +33,16 @@
 #import "LoginJsonModel.h"//登录信息
 
 
+#pragma mark 代码自适应屏幕
+//AdaptW(floatValue)其实就是一个BSFitdpiUtil工具类方法的调用，以常用的基准屏幕，
+#import "BSFitdpiUtil.h"
+
+#pragma mark xib自适应屏幕
+#import "NSLayoutConstraint+BSIBDesignable.h"
+
+
+
+
 //baidu keys
 #define baiduKey @"RwKqpGNsXdAQ86pcjeMOvDxyxCw9kGB4"
 #define myBundleID @"com.hg.pos"
@@ -82,6 +92,8 @@
 
 #define RGB(_red, _green, _blue, _alpha) [UIColor colorWithRed:(_red)/255.0f green:(_green)/255.0f blue:(_blue)/255.0f alpha:(_alpha)]
 
+#define UIColorFromHex(s) [UIColor colorWithRed:(((s & 0xFF0000) >> 16))/255.0 green:(((s &0xFF00) >>8))/255.0 blue:((s &0xFF))/255.0 alpha:1.0]
+
 //// 状态栏(statusbar)
 //#define StatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 //
@@ -120,7 +132,7 @@
 //导航栏背景颜色
 #define NavigationBarColor [UIColor colorWithHexString:@"#ffffff"]//白色
 //标签背景颜色
-#define redTabbarColor [UIColor colorWithHexString:@"#C40629"]//红色
+#define redTabbarColor [UIColor colorWithHexString:@"#FF5006"]//红色
 
 #define MAINCOLOR [UIColor colorWithHexString:@"#FE4049"]
 
@@ -129,7 +141,7 @@
 #define LINECOLOR [UIColor colorWithHexString:@"#F5F5F5"]
 
 //重要
-#define IMPORTANT_BACKGROUND [UIColor colorWithHexString:@"#FB3446"]
+#define IMPORTANT_BACKGROUND [UIColor colorWithHexString:@"#FF5006"]
 #define IMPORTANT_TEXT [UIColor colorWithHexString:@"#333333"]
 //一般
 //#define NORMAL_BACKGROUND [UIColor colorWithHexString:@"#FE4049"]

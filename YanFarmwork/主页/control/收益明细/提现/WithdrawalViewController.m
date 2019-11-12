@@ -9,6 +9,7 @@
 #import "WithdrawalViewController.h"
 
 #import "WithdrawalListViewController.h"
+#import "WithdrawalBankViewController.h"
 
 @interface WithdrawalViewController ()
 
@@ -93,11 +94,23 @@
 }
 */
 
+- (IBAction)chooseSelected:(id)sender {
+    
+    WithdrawalBankViewController *VC = [[WithdrawalBankViewController alloc] initWithNibName:@"WithdrawalBankViewController" bundle:nil];
+    VC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:VC animated:YES];
+    VC.backBlock = ^(NSDictionary *dict) {
+        NSLog(@"选择银行返回值：%@",dict);
+    };
+}
+
 - (IBAction)getAllMoneyBtnClick:(id)sender {
     
     _inputMonetTextField.text = [NSString stringWithFormat:@"%.2f",[_allMoneyString floatValue]];
 }
 
 - (IBAction)confirmBtnClicked:(id)sender {
+    
+   
 }
 @end

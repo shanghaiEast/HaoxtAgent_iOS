@@ -24,6 +24,11 @@
 
 #import "MyWebViewController.h"
 
+//charts
+#import "PieView.h"
+#import "LineView.h"
+
+#import "ProductTypeView.h"
 
 
 //test
@@ -37,11 +42,12 @@
 #import "WithdrawalListViewController.h"
 #import "ReturnsDetailedViewController.h"
 #import "AddressManagementViewController.h"
+#import "AddressEditViewController.h"
+#import "WithdrawalListFilterViewController.h"
+#import "FilterYearAndMonthView.h"
 
 
-static float mainTopViewHeight = 189 + (320 - 30)/4*2 + 30;
-
-static float mainOtherViewHeight = 589;
+static float mainOtherViewHeight = 230;
 
 
 @interface MainViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -51,9 +57,21 @@ static float mainOtherViewHeight = 589;
 @property (retain, nonatomic) NSArray *noticesArray;
 @property (retain, nonatomic) NSDictionary *receiveDict;
 
-
 @property (retain, nonatomic) MainTopView *mainTopView;
 @property (retain, nonatomic) MainOtherView *mainOtherView;
+
+
+
+
+//charts
+@property (retain, nonatomic) PieView *pieView;
+@property (retain, nonatomic) LineView *lineView;
+
+
+@property (retain, nonatomic) UIButton *rightBtn;
+
+@property (nonatomic) float mainTopViewHeight;
+
 
 @end
 
@@ -64,14 +82,50 @@ static float mainOtherViewHeight = 589;
     
     [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleLightContent;
     
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [MyTools setViewController:self withNavigationBarColor:WHITECOLOR andItem:@"首页" itemColor:BLACKCOLOR haveBackBtn:NO withBackImage:defaultBarBackImage_black withBackClickTarget:self BackClickAction:nil];
+    
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
+    
+    _mainTopViewHeight = 202-160+ScreenWidth/2  + (ScreenWidth-30-30)/4*2+30;
+    
+    
+    [self screenView];
+    
+//charts
+//   _pieView = [[[NSBundle mainBundle] loadNibNamed:@"PieView" owner:self options:nil] lastObject];
+//    [_pieView setFrame:CGRectMake(0, 100, 200, 200)];
+//    [_pieView createChart];
+//    [self.view addSubview:_pieView];
+    
+//    _lineView = [[[NSBundle mainBundle] loadNibNamed:@"LineView" owner:self options:nil] lastObject];
+//    [_lineView setFrame:CGRectMake(0, 100, 200, 200)];
+//    [_lineView createChart];
+//    [self.view addSubview:_lineView];
+    
+    
+    
+//    FilterYearAndMonthView *typeView = [[[NSBundle mainBundle] loadNibNamed:@"FilterYearAndMonthView" owner:self options:nil] lastObject];
+//    [typeView setFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-kTabBarHeight)];
+//    [typeView createView];
+//    [self.view addSubview:typeView];
+  
+
+
+//    ProductTypeView *typeView = [[[NSBundle mainBundle] loadNibNamed:@"ProductTypeView" owner:self options:nil] lastObject];
+//    [typeView setFrame:self.view.bounds];
+//    [typeView createView];
+//    [self.view addSubview:typeView];
+//    typeView.selectLisyRowBlock = ^(NSDictionary * _Nullable dict) {
+//        NSLog(@"dict: %@",dict);
+//    };
+
+    
     
 ////test
-    AddressManagementViewController *VC = [[AddressManagementViewController alloc] initWithNibName:@"AddressManagementViewController" bundle:nil];
-    VC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:VC animated:YES];
- 
-    
+//    WithdrawalListFilterViewController *VC = [[WithdrawalListFilterViewController alloc] initWithNibName:@"WithdrawalListFilterViewController" bundle:nil];
+//    VC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -80,6 +134,32 @@ static float mainOtherViewHeight = 589;
     [UIApplication sharedApplication].statusBarStyle =  UIStatusBarStyleDefault;
     
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    
+    [_rightBtn removeFromSuperview];
+}
+
+- (void)screenView{
+    
+    [_rightBtn removeFromSuperview];
+    
+    _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_rightBtn setFrame:CGRectMake(ScreenWidth-30-15, 13, 28, 28)];
+    [_rightBtn setTitle:@"" forState:UIControlStateNormal];
+    [_rightBtn setImage:[UIImage imageNamed:@"xiaoxi.png"] forState:UIControlStateNormal];
+    _rightBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [_rightBtn setTitleColor:[UIColor colorWithHexString:@"#FFFFFF"] forState:UIControlStateNormal];
+    _rightBtn.tag = 1;
+    [_rightBtn addTarget:self action:@selector(screenClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.navigationBar addSubview:_rightBtn];
+}
+
+- (void)screenClicked {
+    NSLog(@"xiao xi");
+    
+    //    AddressEditViewController *VC = [[AddressEditViewController alloc] initWithNibName:@"AddressEditViewController" bundle:nil];
+    //    VC.editType = edit_no;
+    //    VC.hidesBottomBarWhenPushed = YES;
+    //    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -93,7 +173,7 @@ static float mainOtherViewHeight = 589;
 - (void)createTableView {
     //table view
     
-    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-kTabBarHeight) style:UITableViewStylePlain];
+    _myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-kNavBarHAbove7-kTabBarHeight) style:UITableViewStylePlain];
     _myTableView.backgroundColor = [UIColor whiteColor];
     _myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _myTableView.delegate = self;
@@ -162,26 +242,48 @@ static float mainOtherViewHeight = 589;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
+
     //头部
     if (section == 0) {
-        return mainTopViewHeight+kTopBarSafeHeight;
+        return _mainTopViewHeight;
+
+
     }
     //我的收益
     if (section == 1) {
         return mainOtherViewHeight;
     }
-    //交易数据汇总
-    if (section == 2) {
-        
-    }
-    //终端数据汇总
-    if (section == 3) {
-        
-    }
-    
+
     return CGFLOAT_MIN;
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
+//{    //头部
+//    if (section == 0) {
+//        return _mainTopViewHeight;
+//
+//
+//    }
+//    //我的收益
+//    if (section == 1) {
+//        return mainOtherViewHeight;
+//    }
+//
+//    return CGFLOAT_MIN;
+//}
+//@property (nonatomic, strong) NSMutableDictionary *heightAtIndexPath;//缓存高度所用字典
+//#pragma mark - UITableViewDelegate-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{    NSNumber *height = [self.heightAtIndexPath objectForKey:indexPath];    if(height)
+//{        return height.floatValue;
+//}    else
+//{        return 100;
+//}
+//}
+//
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{    NSNumber *height = @(cell.frame.size.height);
+//    [self.heightAtIndexPath setObject:height forKey:indexPath];
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
@@ -190,18 +292,17 @@ static float mainOtherViewHeight = 589;
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
-    
     //头部
     if (section == 0) {
         _mainTopView = [[[NSBundle mainBundle] loadNibNamed:@"MainTopView" owner:self options:nil] lastObject];
-        [_mainTopView setFrame:CGRectMake(0, 0, ScreenWidth, mainTopViewHeight+kTopBarSafeHeight)];
+        [_mainTopView setFrame:CGRectMake(0, kNavBarHAbove7, ScreenWidth, tableView.sectionHeaderHeight)];
         _mainTopView.rootVC = self;
         [_mainTopView createView];
         
         
         return _mainTopView;
     }
-    //我的收益
+    //活动
     if (section == 1) {
         _mainOtherView = [[[NSBundle mainBundle] loadNibNamed:@"MainOtherView" owner:self options:nil] lastObject];
         [_mainOtherView setFrame:CGRectMake(0, 0, ScreenWidth, mainOtherViewHeight)];
@@ -210,14 +311,6 @@ static float mainOtherViewHeight = 589;
         
         
         return _mainOtherView;
-        
-    }
-    //交易数据汇总
-    if (section == 2) {
-        
-    }
-    //终端数据汇总
-    if (section == 3) {
         
     }
     
